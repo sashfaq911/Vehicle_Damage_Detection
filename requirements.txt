@@ -1,0 +1,6 @@
+streamlit>=1.40.2
+Pillow>=9.5.0
+torch>=2.8.0+cu118
+torchvision>=0.20.1+cu118
+requests>=2.32.0
+huggingface-hub
