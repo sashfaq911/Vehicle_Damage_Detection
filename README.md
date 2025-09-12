@@ -23,25 +23,28 @@ The model is trained on third quarter front and rare view hence the picture shou
 </p>
 
 
-## 📌 Problem Statement  <a name="problem-statement"></a>
-
+## 🛑 Problem Statement  <a name="problem-statement"></a>
+Vehicle accidents often result in damages that need quick assessment for insurance claims and repair cost estimation. Manual inspection is time-consuming, subjective, and prone to human error. There is a need for an automated solution that can classify the type of car damage accurately and efficiently, making the claims and repair process faster and more reliable.
 
 ## 💡 Solution Statement  
+This project provides an AI-powered vehicle damage detection system built on a ResNet50 deep learning model. The system is deployed on Hugging Face Spaces, combining a FastAPI backend for inference and a Streamlit frontend for user interaction. Users can upload an image of a damaged car, and the application instantly classifies the type of damage, showcasing practical skills in computer vision, API design, and full-stack AI deployment.
 
 ## ✨ Features <a name="features"></a>
-- Upload a car image and get instant damage classification.
-- Images are classified into 6 classes:
-  - Front Normal
-  - Front Crushed
-  - Front Breakage
-  - Rear Normal
-  - Rear Crushed
-  - Rear Breakage
-- Uses a fine-tuned **Deep Learning model** (ResNet50) to detect car damage types.
-- Uses a **Streamlit frontend** for an interactive web UI.
-- Uses a **FastAPI backend** serving predictions as an API.
-- Device-agnostic (runs on both CPU and GPU).
-- REST API tested with Postman for seamless integration.
+- **User-Friendly Interface** → Upload a car image and get instant damage classification through a clean **Streamlit UI**.  
+- **Six-Class Classification** → Detects and classifies damages into:  
+  - Front Normal  
+  - Front Crushed  
+  - Front Breakage  
+  - Rear Normal  
+  - Rear Crushed  
+  - Rear Breakage  
+- **Deep Learning Backbone** → Fine-tuned **ResNet50** model for accurate vehicle damage detection.  
+- **Modern Architecture** →  
+  - **FastAPI backend** serving predictions via REST API  
+  - **Streamlit frontend** for interactive visualization  
+- **Seamless Deployment** → End-to-end app deployed on **Hugging Face Spaces**, accessible from any browser.  
+- **Cross-Device Compatibility** → Runs efficiently on both **CPU and GPU** environments.  
+- **API Tested** → Backend validated with **Postman** for reliability and easy integration with other systems.  
 
 
 ## 🖥️ App Overview & Usage <a name="app-overview-&-usage"></a>
