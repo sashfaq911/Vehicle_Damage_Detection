@@ -1,10 +1,24 @@
-# 🚗 Vehicle Damange Detection App
+<div align="center">
+
+  
+<h1 align="center"> 🚗 Vehicle Damage Detection App </h1>
 
 This app let's you drag and drop an image of a car and it will tell you what kind of damage it has.
 The model is trained on third quarter front and rare view hence the picture should capture the third quarter front or rare view of a car. 
 
 ![app](app_screenshot.png)
 
+</div>
+
+<p align="center">
+  <a href="#problem-statement">Problem Statement</a> •
+  <a href="#features">Features</a> •
+  <a href="#app-overview-&-usage">App Overview & Usage</a> •
+  <a href="#live-demo">Live Demo</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#acknowledgements">Acknowledgements</a> •
+  <a href="#license">License</a>
+</p>
 
 
 ## 📌 Problem Statement  <a name="problem-statement"></a>
