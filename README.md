@@ -108,7 +108,7 @@ Or run locally:
    ```commandline
     pip install -r requirements.txt
    ```
-3. **Run PastAPI backend**:   
+3. **Run FastAPI backend**:   
    ```commandline
     uvicorn app:app --reload
    ```
