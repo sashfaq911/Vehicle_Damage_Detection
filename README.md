@@ -59,6 +59,16 @@ This project provides an AI-powered vehicle damage detection system built on a *
    1. Rear Breakage
 9. The accuracy on the validation set was around 80%
 
+**User → Streamlit Frontend → FastAPI Backend → Model Helper (`model_helper.predict`) → Prediction Result → Streamlit Frontend → User**
+
+**Flow Description:**
+1. User uploads image → Streamlit Frontend  
+2. Streamlit sends image → FastAPI Backend (`/predict`)  
+3. FastAPI passes image → Model Helper (`model_helper.predict`)  
+4. Model processes image → Returns predicted damage class  
+5. FastAPI sends prediction → Streamlit Frontend  
+6. Streamlit displays prediction → User sees result
+
 ## 🌐 Live Demo <a name="live-demo"></a>
 
 Try the app here: **[Vehicle Damage Detection](https://huggingface.co/spaces/sashfaq911/Car_Damage_Detector)**
