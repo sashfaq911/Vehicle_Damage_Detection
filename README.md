@@ -57,7 +57,7 @@ The model is trained on third quarter front and rare view hence the picture shou
 
 ## 🌐 Live Demo <a name="live-demo"></a>
 
-Try the app here: **[Vehicle Damage Detection](https://premium-predictor-app.streamlit.app/)**
+Try the app here: **[Vehicle Damage Detection](https://huggingface.co/spaces/sashfaq911/Car_Damage_Detector)**
 
 
 ## 🛠️ Tech Stack
@@ -93,7 +93,7 @@ Vehicle_Damage_Detection/
 
 ## 🚀 Deployment <a name="deployment"></a>
 The app is deployed on **Render** and accessible here:  
-👉 [Live Demo](https://your-app-url.onrender.com)  
+👉 [Live Demo](https://huggingface.co/spaces/sashfaq911/Car_Damage_Detector)  
 
 Or run locally: 
 ### Prerequisites:  
