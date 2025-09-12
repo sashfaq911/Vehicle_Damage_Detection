@@ -71,7 +71,7 @@ This project provides an AI-powered vehicle damage detection system built on a *
 - The predicted damage class is instantly displayed in a **styled result box** on Streamlit.  
 - Users can quickly see the **type of damage** and understand the car’s condition at a glance.
 
-### Architecture Flow
+### ⏩ Architecture Flow
 **User → Streamlit Frontend → FastAPI Backend → Model Helper (`model_helper.predict`) → Prediction Result → Streamlit Frontend → User**
 
 **Flow Description:**
