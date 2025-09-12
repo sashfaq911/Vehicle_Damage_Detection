@@ -48,17 +48,30 @@ This project provides an AI-powered vehicle damage detection system built on a *
 
 ![app](app_screenshot.png)
 
-### Model Details
-1. Used ResNet50 for transfer learning
-2. Model was trained on around 1700 images with 6 target classes
-   1. Front Normal
-   1. Front Crushed
-   1. Front Breakage
-   1. Rear Normal
-   1. Rear Crushed
-   1. Rear Breakage
-9. The accuracy on the validation set was around 80%
+### 📸 Image Upload & Display
+- Users upload a car image (JPG/PNG) through the **Streamlit interface**.  
+- The app temporarily saves the file in `/tmp` and displays it for confirmation.  
 
+### ⚡ Prediction via FastAPI Backend
+- The uploaded image is sent to the **FastAPI backend** (`/predict` endpoint) for analysis.  
+- If the backend is unavailable, the app **automatically falls back** to the local model.  
+
+### 🖼️ Preprocessing & Model Inference
+- The image is resized, normalized, and converted into a tensor.  
+- A **pre-trained ResNet50 model** predicts one of six car damage categories:  
+  - 🚗 Front Normal  
+  - 💥 Front Crushed  
+  - 🔧 Front Breakage  
+  - 🚗 Rear Normal  
+  - 💥 Rear Crushed  
+  - 🔧 Rear Breakage  
+- The accuracy on the validation set was around 80%
+
+### ✅ Prediction Output
+- The predicted damage class is instantly displayed in a **styled result box** on Streamlit.  
+- Users can quickly see the **type of damage** and understand the car’s condition at a glance.
+
+### Architecture Flow
 **User → Streamlit Frontend → FastAPI Backend → Model Helper (`model_helper.predict`) → Prediction Result → Streamlit Frontend → User**
 
 **Flow Description:**
