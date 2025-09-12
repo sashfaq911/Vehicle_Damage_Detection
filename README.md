@@ -5,10 +5,7 @@
 
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Live%20Demo-Streamlit-blue)](https://huggingface.co/spaces/sashfaq911/Car_Damage_Detector)
 
-An end-to-end AI application for vehicle damage classification using **FastAPI** (backend), **Streamlit** (frontend), and **PyTorch** (deep learning).
-
-This app let's you drag and drop an image of a car and it will tell you what kind of damage it has.
-The model is trained on third quarter front and rare view hence the picture should capture the third quarter front or rare view of a car. 
+An end-to-end AI application for vehicle damage classification using **FastAPI** (backend), **Streamlit** (frontend), and **PyTorch** (deep learning). This app let's you drag and drop an image of a car and teslls you what kind of damage it has.
 
 </div>
 
@@ -27,7 +24,7 @@ The model is trained on third quarter front and rare view hence the picture shou
 Vehicle accidents often result in damages that need quick assessment for insurance claims and repair cost estimation. Manual inspection is time-consuming, subjective, and prone to human error. There is a need for an automated solution that can classify the type of car damage accurately and efficiently, making the claims and repair process faster and more reliable.
 
 ## 💡 Solution Statement  
-This project provides an AI-powered vehicle damage detection system built on a ResNet50 deep learning model. The system is deployed on Hugging Face Spaces, combining a FastAPI backend for inference and a Streamlit frontend for user interaction. Users can upload an image of a damaged car, and the application instantly classifies the type of damage, showcasing practical skills in computer vision, API design, and full-stack AI deployment.
+This project provides an AI-powered vehicle damage detection system built on a **ResNet50 deep learning model**. The system is deployed on **Hugging Face Spaces**, combining a **FastAPI backend** for inference and a **Streamlit frontend** for user interaction. Users can upload an image of a damaged car, and the application instantly classifies the type of damage, showcasing practical skills in computer vision, API design, and full-stack AI deployment.
 
 ## ✨ Features <a name="features"></a>
 - Upload a car image and get instant damage classification through a clean **Streamlit UI**.  
@@ -70,9 +67,10 @@ Try the app here: **[Vehicle Damage Detection](https://huggingface.co/spaces/sas
 ## 🛠️ Tech Stack
 
 - **Python**, **PyTorch**
-- **FastAPI** (backend)
-- **Streamlit** (frontend)
-- **Docker** (deployment)  
+- **FastAPI** → backend
+- **Streamlit** → frontend
+- **Docker** → deployment
+- **HuggingFace Spaces** → cloud hosting
 
 
 ## 📦 Project Structure
