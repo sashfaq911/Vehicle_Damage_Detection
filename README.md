@@ -65,13 +65,13 @@ Try the app here: **[Vehicle Damage Detection](https://premium-predictor-app.str
 - **Python**, **PyTorch**
 - **FastAPI** (backend)
 - **Streamlit** (frontend)
-- **Docker** (optional for deployment)  
+- **Docker** (deployment)  
 
 
 ## 📦 Project Structure
 
 ```bash
-Health_Insurance_Premium_Predictor/
+Vehicle_Damage_Detection/
 │
 ├── assets/                         
 │   ├── demo.gif                    # Demo of the Streamlit web app
@@ -101,7 +101,7 @@ Or run locally:
 
 1. **Clone the repo**:
    ```bash
-   git clone https://github.com/sashfaq911/health-insurance-premium-predictor.git
+   git clone https://github.com/sashfaq911/Vehicle_Damage_Detection.git
    cd health-insurance-premium-predictor
    ```
 2. **Install dependencies**:   
