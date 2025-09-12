@@ -30,21 +30,21 @@ Vehicle accidents often result in damages that need quick assessment for insuran
 This project provides an AI-powered vehicle damage detection system built on a ResNet50 deep learning model. The system is deployed on Hugging Face Spaces, combining a FastAPI backend for inference and a Streamlit frontend for user interaction. Users can upload an image of a damaged car, and the application instantly classifies the type of damage, showcasing practical skills in computer vision, API design, and full-stack AI deployment.
 
 ## ✨ Features <a name="features"></a>
-- **User-Friendly Interface** → Upload a car image and get instant damage classification through a clean **Streamlit UI**.  
-- **Six-Class Classification** → Detects and classifies damages into:  
+- Upload a car image and get instant damage classification through a clean **Streamlit UI**.  
+- Detects and classifies damages into:  
   - Front Normal  
   - Front Crushed  
   - Front Breakage  
   - Rear Normal  
   - Rear Crushed  
   - Rear Breakage  
-- **Deep Learning Backbone** → Fine-tuned **ResNet50** model for accurate vehicle damage detection.  
+- Fine-tuned **ResNet50** model for accurate vehicle damage detection.  
 - **Modern Architecture** →  
   - **FastAPI backend** serving predictions via REST API  
   - **Streamlit frontend** for interactive visualization  
-- **Seamless Deployment** → End-to-end app deployed on **Hugging Face Spaces**, accessible from any browser.  
-- **Cross-Device Compatibility** → Runs efficiently on both **CPU and GPU** environments.  
-- **API Tested** → Backend validated with **Postman** for reliability and easy integration with other systems.  
+-  End-to-end app deployed on **Hugging Face Spaces**, accessible from any browser.  
+- Runs efficiently on both **CPU and GPU** environments.  
+- Backend validated with **Postman** for reliability and easy integration with other systems.  
 
 
 ## 🖥️ App Overview & Usage <a name="app-overview-&-usage"></a>
@@ -80,21 +80,18 @@ Try the app here: **[Vehicle Damage Detection](https://huggingface.co/spaces/sas
 ```bash
 Vehicle_Damage_Detection/
 │
-├── assets/                         
-│   ├── demo.gif                    # Demo of the Streamlit web app
-│   ├── screenshot.png              # Screenshot of Streamlit web app
-│
-├── artifacts/                      # Serialized models and scalers
-│   ├── model_rest.joblib           # XGBoost Model for users > 25 years (adult users)
-│   ├── model_young.joblib          # Linear Regression Model for users <= 25 years (younger users)
-│   ├── scaler_rest.joblib          # StandardScaler for older group
-│   └── scaler_young.joblib         # StandardScaler for younger group
+├── model/                         
+│   ├── saved_model.pth             # Trained ResNet50 model weights
 │
 ├── LICENSE                         # Apache License file
 ├── README.md                       # Project documentation
-├── main.py                         # Streamlit app logic
-├── prediction_helper.py            # Preprocessing & prediction logic
-└── requirements.txt                # Python dependencies
+├── requirements.txt                # Python dependencies
+├── app.py                          # Streamlit frontend application
+├── backend.py                      # FastAPI backend for inference requests
+├── model_helper.py                 # Model loading and utility functions
+├── supervisord.conf                # Process manager configuration
+├── Dockerfile                      # Container specification for deployment
+└── .gitattributes                  # Git configuration for large files and line endings
 ```
 
 
