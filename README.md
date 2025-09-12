@@ -129,11 +129,18 @@ Or run locally:
 ### 🐳 Run with Docker
 
 If you prefer containers:
-# Build the image
-docker build -t car-damage-app .
 
-# Run container exposing both ports
+Build the image
+```commandline
+docker build -t car-damage-app .
+```
+
+Run container exposing both ports
+```commandline
 docker run -p 8000:8000 -p 8501:8501 car-damage-app
+```
+- Backend → http://localhost:8000
+- Frontend → http://localhost:8501
 
 
 ## 🙏 Acknowledgements <a name="acknowledgements"></a>
