@@ -95,8 +95,8 @@ Vehicle_Damage_Detection/
 ```
 
 
-## 🚀 Deployment <a name="deployment"></a>
-The app is deployed on **Render** and accessible here:  
+## 🚀 Installation <a name="installation"></a>
+The app is deployed on **Hugging Face Spaces** and accessible here:  
 👉 [Live Demo](https://huggingface.co/spaces/sashfaq911/Car_Damage_Detector)  
 
 Or run locally: 
@@ -106,38 +106,35 @@ Or run locally:
 1. **Clone the repo**:
    ```bash
    git clone https://github.com/sashfaq911/Vehicle_Damage_Detection.git
-   cd health-insurance-premium-predictor
+   cd Vehicle_Damage_Detection
    ```
 2. **Install dependencies**:   
    ```commandline
     pip install -r requirements.txt
    ```
-3. **Run FastAPI backend**:   
+3. **Run FastAPI backend**:
+   Start the backend API server:  
    ```commandline
-    uvicorn app:app --reload
+    uvicorn backend:app --reload --host 0.0.0.0 --port 8000
    ```
-4. **Run the Streamlit frontend**:   
+   - Swagger Docs → http://127.0.0.1:8000/docs
+   - Prediction endpoint → POST http://127.0.0.1:8000/predict
+     
+5. **Run the Streamlit frontend**:
+    Open a decond terminal and run:   
    ```commandline
     streamlit run app.py
    ```
 
-## 📬 API Usage 
+### 🐳 Run with Docker
 
-**Endpoint:** 
-```commandline
-/predict
-```
-**Method:** POST
+If you prefer containers:
+# Build the image
+docker build -t car-damage-app .
 
-**Body:** Image file 
-```commandline
-(multipart/form-data)
-```
-Example with curl:
-```bash
-curl -X POST "https://your-app-url.onrender.com/predict" \
-  -F "file=@car.jpg"
-```
+# Run container exposing both ports
+docker run -p 8000:8000 -p 8501:8501 car-damage-app
+
 
 ## 🙏 Acknowledgements <a name="acknowledgements"></a>
 
