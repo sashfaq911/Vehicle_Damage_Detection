@@ -107,9 +107,23 @@ Vehicle_Damage_Detection/
 The app is deployed on **Hugging Face Spaces** and accessible here:  
 👉 [Live Demo](https://huggingface.co/spaces/sashfaq911/Car_Damage_Detector)  
 
-You can run this project in two ways: locally (with Python & pip) or using Docker.
+This project consists of a **FastAPI backend** for predictions and a **Streamlit frontend**. You can run it in three ways: directly on Hugging Face, locally with Python, or using Docker.
 
-### ⚡ Option 1 — Run Locally
+---
+
+### 🌟 Option 1 — Run on Hugging Face Spaces
+
+1. **Fork or clone the Space** to your Hugging Face account.  
+2. **Set the API_URL environment variable** in **Space Settings → Secrets**:
+   - Name: API_URL
+   - Value: http://127.0.0.1:7860/predict
+4.  **Upload your model files** (if not already included).  
+5. The Space will automatically start both **FastAPI backend** and **Streamlit frontend**.  
+6. Users can upload images and get predictions instantly.
+   
+> **Note:** Uploaded images are stored temporarily in `/tmp`.
+
+### ⚡ Option 2 — Run Locally (Python + pip)
 
 #### Prerequisites:  
 - Python 3.10+
@@ -123,33 +137,42 @@ You can run this project in two ways: locally (with Python & pip) or using Docke
    ```commandline
     pip install -r requirements.txt
    ```
-3. **Run FastAPI backend**:
-   Start the backend API server:  
+3. **Install dependencies**:
+  ```commandline
+   export API_URL="http://127.0.0.1:8000/predict"
+  ```
+5. **Run FastAPI backend**:  
    ```commandline
     uvicorn backend:app --reload --host 0.0.0.0 --port 8000
    ```
    - Swagger Docs → http://127.0.0.1:8000/docs
    - Prediction endpoint → POST http://127.0.0.1:8000/predict
      
-5. **Run the Streamlit frontend**:
+6. **Run the Streamlit frontend**:
+   
    Open a second terminal and run:   
    ```commandline
     streamlit run app.py
    ```
+7. Open the browser → Streamlit will connect to FastAPI if API_URL is set.
+
+>  Tip: Uploaded images are saved temporarily in `/tmp/temp_file.jpg`.
+
 
 ### 🐳 Option 2 — Run with Docker
 
-Build the image
+1. Build the image
 ```commandline
 docker build -t car-damage-app .
 ```
 
-Run container exposing both ports
+2. Run container exposing both ports
 ```commandline
 docker run -p 8000:8000 -p 8501:8501 car-damage-app
 ```
 - Backend → http://localhost:8000
 - Frontend → http://localhost:8501
+- `API_URL` inside the container should be set to `http://127.0.0.1:8000/predict`
 
 
 ## 🙏 Acknowledgements <a name="acknowledgements"></a>
