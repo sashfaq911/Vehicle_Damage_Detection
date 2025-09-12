@@ -17,7 +17,7 @@ The model is trained on third quarter front and rare view hence the picture shou
   <a href="#features">Features</a> •
   <a href="#app-overview-&-usage">App Overview & Usage</a> •
   <a href="#live-demo">Live Demo</a> •
-  <a href="#installation">Installation</a> •
+  <a href="#installation-&-deployment">Installation</a> •
   <a href="#acknowledgements">Acknowledgements</a> •
   <a href="#license">License</a>
 </p>
@@ -95,12 +95,15 @@ Vehicle_Damage_Detection/
 ```
 
 
-## 🚀 Installation <a name="installation"></a>
+## 🚀 Installation & Deployment <a name="installation-&-deployment"></a>
 The app is deployed on **Hugging Face Spaces** and accessible here:  
 👉 [Live Demo](https://huggingface.co/spaces/sashfaq911/Car_Damage_Detector)  
 
-Or run locally: 
-### Prerequisites:  
+You can run this project in two ways: locally (with Python & pip) or using Docker.
+
+### ⚡ Option 1 — Run Locally
+
+#### Prerequisites:  
 - Python 3.10+
 
 1. **Clone the repo**:
@@ -121,14 +124,12 @@ Or run locally:
    - Prediction endpoint → POST http://127.0.0.1:8000/predict
      
 5. **Run the Streamlit frontend**:
-    Open a decond terminal and run:   
+   Open a second terminal and run:   
    ```commandline
     streamlit run app.py
    ```
 
-### 🐳 Run with Docker
-
-If you prefer containers:
+### 🐳 Option 2 — Run with Docker
 
 Build the image
 ```commandline
