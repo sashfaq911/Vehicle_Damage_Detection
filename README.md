@@ -124,7 +124,7 @@ This project consists of a **FastAPI backend** for predictions and a **Streamlit
 
 ---
 
-### 🌟 Option 1 — Run on Hugging Face Spaces
+### 🤗 Option 1 — Run on Hugging Face Spaces
 
 1. **Fork or clone the Space** to your Hugging Face account.  
 2. **Set the API_URL environment variable** in **Space Settings → Secrets**:
@@ -136,7 +136,7 @@ This project consists of a **FastAPI backend** for predictions and a **Streamlit
    
 > **Note:** Uploaded images are stored temporarily in `/tmp`.
 
-### ⚡ Option 2 — Run Locally (Python + pip)
+### 🐍 Option 2 — Run Locally (Python + pip)
 
 #### Prerequisites:  
 - Python 3.10+
@@ -150,29 +150,29 @@ This project consists of a **FastAPI backend** for predictions and a **Streamlit
    ```commandline
     pip install -r requirements.txt
    ```
-3. **Install dependencies**:
+3. **Set API_URL environment variable** (optional if using local model fallback):
   ```commandline
    export API_URL="http://127.0.0.1:8000/predict"
   ```
-5. **Run FastAPI backend**:  
+4. **Run FastAPI backend**:  
    ```commandline
     uvicorn backend:app --reload --host 0.0.0.0 --port 8000
    ```
    - Swagger Docs → http://127.0.0.1:8000/docs
    - Prediction endpoint → POST http://127.0.0.1:8000/predict
      
-6. **Run the Streamlit frontend**:
+5. **Run the Streamlit frontend**:
    
    Open a second terminal and run:   
    ```commandline
     streamlit run app.py
    ```
-7. Open the browser → Streamlit will connect to FastAPI if API_URL is set.
+6. Open the browser → Streamlit will connect to FastAPI if API_URL is set.
 
 >  Tip: Uploaded images are saved temporarily in `/tmp/temp_file.jpg`.
 
 
-### 🐳 Option 2 — Run with Docker
+### 🐳 Option 3 — Run with Docker
 
 1. Build the image
 ```commandline
