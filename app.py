@@ -108,6 +108,6 @@ if uploaded_file:
 st.caption(
     """
     ---
-    👩‍💻 **Author:** *Developed by Soobiya Ashfaq. Showcasing computer vision, MLOps, and deployment skills*
+    👩‍💻 **Author:** *Developed by Soobiya Ashfaq*
     """
 )
