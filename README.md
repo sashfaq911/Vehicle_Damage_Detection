@@ -4,10 +4,8 @@
 
 <h1 align="center"> Car Damage Detection App </h1>
 
-
-An end-to-end AI application for vehicle damage classification using **FastAPI** (backend), **Streamlit** (frontend), and **PyTorch** (deep learning). This app let's you drag and drop an image of a car and teslls you what kind of damage it has.
-
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Live%20Demo-Streamlit-blue)](https://huggingface.co/spaces/sashfaq911/Car_Damage_Detector)
+
 
 </div>
 
@@ -20,6 +18,9 @@ An end-to-end AI application for vehicle damage classification using **FastAPI**
   <a href="#acknowledgements">Acknowledgements</a> •
   <a href="#license">License</a>
 </p>
+
+An end-to-end AI application for vehicle damage classification using **FastAPI** (backend), **Streamlit** (frontend), and **PyTorch** (deep learning). This app let's you drag and drop an image of a car and teslls you what kind of damage it has.
+---
 
 
 ## 🛑 Problem Statement  <a name="problem-statement"></a>
