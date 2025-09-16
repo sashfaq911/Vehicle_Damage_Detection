@@ -91,7 +91,8 @@ Here's a screenshot below of what the app looks like:
 
 ## 🌐 Live Demo <a name="live-demo"></a>
 
-Try the app here: **[Vehicle Damage Detection](https://huggingface.co/spaces/sashfaq911/Car_Damage_Detector)**
+The app is deployed on **Hugging Face Spaces** and accessible here:  
+👉 **[Vehicle Damage Detection](https://huggingface.co/spaces/sashfaq911/Car_Damage_Detector)**
 
 
 ## 🛠️ Tech Stack
@@ -124,9 +125,7 @@ Vehicle_Damage_Detection/
 
 
 ## 🚀 Installation & Deployment <a name="installation-&-deployment"></a>
-The app is deployed on **Hugging Face Spaces** and accessible here:  
-👉 [Live Demo](https://huggingface.co/spaces/sashfaq911/Car_Damage_Detector)  
-
+ 
 This project consists of a **FastAPI backend** for predictions and a **Streamlit frontend**. You can run it locally with Python, or run using Docker.
 
 
