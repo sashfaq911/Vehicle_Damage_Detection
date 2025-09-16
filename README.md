@@ -19,8 +19,8 @@
   <a href="#license">License</a>
 </p>
 
+
 An end-to-end AI application for vehicle damage classification using **FastAPI** (backend), **Streamlit** (frontend), and **PyTorch** (deep learning). This app let's you drag and drop an image of a car and teslls you what kind of damage it has.
----
 
 
 ## 🛑 Problem Statement  <a name="problem-statement"></a>
