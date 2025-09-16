@@ -28,6 +28,8 @@ Vehicle accidents often result in damages that need quick assessment for insuran
 ## 💡 Solution Statement  
 This project provides an AI-powered vehicle damage detection system built on a **ResNet50 deep learning model**. The system is deployed on **Hugging Face Spaces**, combining a **FastAPI backend** for inference and a **Streamlit frontend** for user interaction. Users can upload an image of a damaged car, and the application instantly classifies the type of damage, showcasing practical skills in computer vision, API design, and full-stack AI deployment.
 
+Here's a screenshot below of what the app looks like:
+
 ![image](car_damage_detection_cover.png)
 
 ## ✨ Features <a name="features"></a>
