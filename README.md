@@ -2,7 +2,8 @@
 
   
 <h1 align="center"> 🚗 Vehicle Damage Detection App </h1>
-![app](car_damage_detection_cover.png)
+
+![image](car_damage_detection_cover.png)
 
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Live%20Demo-Streamlit-blue)](https://huggingface.co/spaces/sashfaq911/Car_Damage_Detector)
 
@@ -46,7 +47,7 @@ This project provides an AI-powered vehicle damage detection system built on a *
 
 ## 🖥️ App Overview & Usage <a name="app-overview-&-usage"></a>
 
-![app](app_screenshot.png)
+![image](app_screenshot.png)
 
 ### 📸 Image Upload & Display
 - Users upload a car image (JPG/PNG) through the **Streamlit interface**.  
