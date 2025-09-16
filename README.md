@@ -47,6 +47,9 @@ This project provides an AI-powered vehicle damage detection system built on a *
 
 ## 🖥️ App Overview & Usage <a name="app-overview-&-usage"></a>
 
+
+![image](app_screenshot.png)
+
 ![app](app_screenshot.png)
 
 ### 📸 Image Upload & Display
