@@ -2,6 +2,7 @@
 
   
 <h1 align="center"> 🚗 Vehicle Damage Detection App </h1>
+![app](car_damage_detection_cover.png)
 
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Live%20Demo-Streamlit-blue)](https://huggingface.co/spaces/sashfaq911/Car_Damage_Detector)
 
