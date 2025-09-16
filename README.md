@@ -40,7 +40,6 @@ This project provides an AI-powered vehicle damage detection system built on a *
   - **FastAPI backend** serving predictions via REST API  
   - **Streamlit frontend** for interactive visualization  
 -  End-to-end app deployed on **Hugging Face Spaces**, accessible from any browser.  
-- Runs efficiently on both **CPU and GPU** environments.  
 - Backend validated with **Postman** for reliability and easy integration with other systems.  
 
 
@@ -50,7 +49,7 @@ This project provides an AI-powered vehicle damage detection system built on a *
 
 ### 📸 Image Upload & Display
 - Users upload a car image (JPG/PNG) through the **Streamlit interface**.  
-- The app temporarily saves the file in `/tmp` and displays it for confirmation.  
+- Uploaded files are kept in memory by Streamlit and displayed immediately for confirmation.  
 
 ### ⚡ Prediction via FastAPI Backend
 - The uploaded image is sent to the **FastAPI backend** (`/predict` endpoint) for analysis.  
@@ -65,7 +64,7 @@ This project provides an AI-powered vehicle damage detection system built on a *
   - 🚗 Rear Normal  
   - 💥 Rear Crushed  
   - 🔧 Rear Breakage  
-- The accuracy on the validation set was around 80%
+- Model performance on the validation set is around 80% accuracy.
 
 ### ✅ Prediction Output
 - The predicted damage class is instantly displayed in a **styled result box** on Streamlit.  
@@ -120,23 +119,10 @@ Vehicle_Damage_Detection/
 The app is deployed on **Hugging Face Spaces** and accessible here:  
 👉 [Live Demo](https://huggingface.co/spaces/sashfaq911/Car_Damage_Detector)  
 
-This project consists of a **FastAPI backend** for predictions and a **Streamlit frontend**. You can run it in three ways: directly on Hugging Face, locally with Python, or using Docker.
+This project consists of a **FastAPI backend** for predictions and a **Streamlit frontend**. You can run it locally with Python, or run using Docker.
 
----
 
-### 🤗 Option 1 — Run on Hugging Face Spaces
-
-1. **Fork or clone the Space** to your Hugging Face account.  
-2. **Set the API_URL environment variable** in **Space Settings → Secrets**:
-   - Name: API_URL
-   - Value: http://127.0.0.1:7860/predict
-4.  **Upload your model files** (if not already included).  
-5. The Space will automatically start both **FastAPI backend** and **Streamlit frontend**.  
-6. Users can upload images and get predictions instantly.
-   
-> **Note:** Uploaded images are stored temporarily in `/tmp`.
-
-### 🐍 Option 2 — Run Locally (Python + pip)
+### 🐍 Option 1 — Run Locally (Python + pip)
 
 #### Prerequisites:  
 - Python 3.10+
@@ -146,20 +132,20 @@ This project consists of a **FastAPI backend** for predictions and a **Streamlit
    git clone https://github.com/sashfaq911/Vehicle_Damage_Detection.git
    cd Vehicle_Damage_Detection
    ```
-2. **Install dependencies**:   
+2. **Create a virtual environment**:   
+   ```commandline
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+3. **Install dependencies**:   
    ```commandline
     pip install -r requirements.txt
    ```
-3. **Set API_URL environment variable** (optional if using local model fallback):
-  ```commandline
-   export API_URL="http://127.0.0.1:8000/predict"
-  ```
 4. **Run FastAPI backend**:  
    ```commandline
     uvicorn backend:app --reload --host 0.0.0.0 --port 8000
    ```
-   - Swagger Docs → http://127.0.0.1:8000/docs
-   - Prediction endpoint → POST http://127.0.0.1:8000/predict
+   - The backend will be available at →  http://localhost:8000
      
 5. **Run the Streamlit frontend**:
    
@@ -167,12 +153,16 @@ This project consists of a **FastAPI backend** for predictions and a **Streamlit
    ```commandline
     streamlit run app.py
    ```
-6. Open the browser → Streamlit will connect to FastAPI if API_URL is set.
+ - The frontend will open at →  `http://localhost:8000`
+ - It communicates with the backend wia API requests.
 
->  Tip: Uploaded images are saved temporarily in `/tmp/temp_file.jpg`.
+6. **Access the app**:
+- Local URL: `http://localhost:8501`
+- Network URL (for LAN access): e.g., `http://10.108.0.87:8501`
+- External URL (if deployed): e.g., `http://52.1.65.187:8501`
 
 
-### 🐳 Option 3 — Run with Docker
+### 🐳 Option 2 — Run with Docker
 
 1. Build the image
 ```commandline
@@ -181,11 +171,12 @@ docker build -t car-damage-app .
 
 2. Run container exposing both ports
 ```commandline
-docker run -p 8000:8000 -p 8501:8501 car-damage-app
+docker run -d -p 8501:8501 -p 8000:8000 car-damage-app
 ```
-- Backend → http://localhost:8000
-- Frontend → http://localhost:8501
-- `API_URL` inside the container should be set to `http://127.0.0.1:8000/predict`
+
+3. **Access your app**:
+- FastAPI Backend → `http://localhost:8000`
+- Streamlit Frontend → `http://localhost:8501`
 
 
 ## 🙏 Acknowledgements <a name="acknowledgements"></a>
