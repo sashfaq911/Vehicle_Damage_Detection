@@ -50,7 +50,6 @@ This project provides an AI-powered vehicle damage detection system built on a *
 
 ![image](app_screenshot.png)
 
-![app](app_screenshot.png)
 
 ### 📸 Image Upload & Display
 - Users upload a car image (JPG/PNG) through the **Streamlit interface**.  
