@@ -104,7 +104,7 @@ The app is deployed on **Hugging Face Spaces** and accessible here:
 - **HuggingFace Spaces** → cloud hosting
 
 
-## 📦 Project Structure
+## 📁 Project Structure
 
 ```bash
 Vehicle_Damage_Detection/
